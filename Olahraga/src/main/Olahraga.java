@@ -64,11 +64,13 @@ public class Olahraga {
             System.out.println("Error");
           }
     }
-    int choice;
+    
     do
     {
-        firstpage(Admin);
-        
+       firstpage(Admin);
+       int choice;
+       String SE;
+       Scanner read = new Scanner(System.in);
         try{
         System.out.println("Input Choice: ");
         }
@@ -90,7 +92,18 @@ public class Olahraga {
          }
          case 3:
          {
+             do
+         {
+             
+             System.out.println("Save and Exit?");
+             SE = read.nextInt();
+             
+         }
+             while(!SE.equals"yes");
+             if(!keluar.equals("yes"))
+             {        
              saving(orglog, userlog, activities, adminlog, FileOrganizers, FileUser, FileActivities, FileAdmin);
+         }
          }
             
      } while(choice!=3);
@@ -760,7 +773,7 @@ public class Olahraga {
             } else System.out.println(" Unavailable  |");
         
         }
-        System.out.println("===============================================================================================================================================================================");
+        
 
     }
     }
